@@ -6,12 +6,23 @@
 </head>
 <body>
 <header>
-    <h1>Sips Tea</h1>
+    <a href="/"><h1>Sips Tea</h1></a>
+    
     <form action="{{ url_for('search') }}" method="GET">
         <input type="text" name="q" placeholder="Search For Keyword">
         <button type="submit">Search</button>
     </form>
+    <form method="get" action="/filter">
+           <select name="category" id="category">
+            <option value="All" {% if selected_category == 'All' %}selected{% endif %}>All</option>
+            {% for category in categories %}
+                <option value="{{ category }}" {% if selected_category == category %}selected{% endif %}>{{ category }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Filter</button>
+    </form>
 </header>
+
 {% block content %}{% endblock %}
 </body>
 </html>

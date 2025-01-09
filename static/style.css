@@ -17,10 +17,12 @@ header {
 header h1 {
     margin: 0;
     font-size: 2em;
+    color: #fff;
 }
 
 header form {
     margin-top: 10px;
+    display:inline-flex;
 }
 
 header input[type="text"] {
@@ -104,3 +106,32 @@ article p {
     color: #666;
     pointer-events: none;
 }
+
+
+.collapsible-summary {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 300px;
+  }
+  
+  .toggle-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .content {
+    display: none; /* Content is hidden by default */
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    margin-top: 10px;
+  }
+  
+  .content.show {
+    display: block; /* Content will be shown when the class 'show' is added */
+  }
+
+  
